@@ -27,7 +27,18 @@ const navigate = (e) => {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    render("/");
+    const redirectUrl = sessionStorage.redirect;
+
+    if (redirectUrl) {
+        sessionStorage.redirect = null;
+        const relative = redirectUrl.split("/")[1] || "/";
+        history.replaceState(null, "", relative);
+        render(relative);
+    }
+    else
+    {
+        render(window.location.pathname);
+    }
     document.body.addEventListener("click", navigate);
 });
 

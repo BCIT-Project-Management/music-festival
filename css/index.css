@@ -1,0 +1,27 @@
+nav {
+    border-bottom: 1px solid black;
+}
+
+#nav-links {
+    width: 40%;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#date {
+    font-size: 0.8em;
+    align-content: center;
+}
+
+#app {
+    padding: 40px 10%;
+}
+
+footer {
+    padding: 40px 10%;
+}
+
+#social-links {
+    width: 30%;;
+}

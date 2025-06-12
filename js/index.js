@@ -1,11 +1,11 @@
 let routes = {
-    "/": "/pages/home.html",
-    "/Music": "/pages/music.html"
+    "/": "pages/home.html",
+    "/Music": "pages/music.html"
 }
 
 const render = async (path) => {
     const app = document.getElementById("app");
-    const file = routes[path] || "/pages/404.html";
+    const file = routes[path] || "pages/404.html";
 
     try {
         const res = await fetch(file);

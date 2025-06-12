@@ -21,6 +21,8 @@ const render = async (path) => {
     const file = getRoute(path);
 
     try {
+
+        app.style.display = "none";
         // load html
         const res = await fetch(file.html);
         if (!res.ok) throw new Error("Page not found");
@@ -41,10 +43,12 @@ const render = async (path) => {
         link.id = styleId;
         document.head.appendChild(link);
 
+        await setTimeout(() => {
+            app.style.display = "block";
+        }, 100);
+
     } catch (err) {
-        const res = await fetch("pages/no-content.html");
-        const html = await res.text();
-        app.innerHTML = html;
+        await render("/no-content");
     }
 }
 

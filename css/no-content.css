@@ -1,0 +1,8 @@
+.no-content-container {
+    height: 100%;
+    width: 100%;
+}
+
+.no-content-container h1 {
+    color: lightgrey;
+}

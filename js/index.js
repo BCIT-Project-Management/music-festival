@@ -1,11 +1,24 @@
-const routes = {
-    "/": {html: "pages/home.html", css:"css/home.css"},
-    "/Music": {html: "pages/music.html", css:"css/music.css"},
+const getRoute = (path) => {
+    const cleanPath = path === "/" ? "home" : path.split("/")[1];
+
+    return {
+        html: `pages/${cleanPath.toLowerCase()}.html`,
+        css: `css/${cleanPath.toLowerCase()}.css`
+    };
+}
+
+async function checkFileExists(url) {
+    try {
+        const response = await fetch(url);
+        return response.ok;
+    } catch (error) {
+        return false;
+    }
 }
 
 const render = async (path) => {
     const app = document.getElementById("app");
-    const file = routes[path] || {html: "pages/404.html", css: ""};
+    const file = getRoute(path);
 
     try {
         // load html
@@ -21,15 +34,17 @@ const render = async (path) => {
             oldStyle.remove();
         }
 
-        if (!file.css) return;
+        if (!await checkFileExists(file.css)) return;
         const link = document.createElement("link");
         link.href = file.css;
         link.rel = "stylesheet";
         link.id = styleId;
         document.head.appendChild(link);
-    
+
     } catch (err) {
-        app.innerHTML = "<h1>404 - Page not found</h1>";
+        const res = await fetch("pages/no-content.html");
+        const html = await res.text();
+        app.innerHTML = html;
     }
 }
 
@@ -51,8 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
         history.replaceState(null, "", relative);
         render(relative);
     }
-    else
-    {
+    else {
         render(window.location.pathname);
     }
     document.body.addEventListener("click", navigate);

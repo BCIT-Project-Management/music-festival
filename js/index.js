@@ -48,7 +48,7 @@ const render = async (path) => {
         }, 100);
 
     } catch (err) {
-        await render("/no-content");
+        if (path !== "/no-content") await render("/no-content");
     }
 }
 

@@ -1,17 +1,33 @@
-let routes = {
-    "/": "pages/home.html",
-    "/Music": "pages/music.html"
+const routes = {
+    "/": {html: "pages/home.html", css:"css/home.css"},
+    "/Music": {html: "pages/music.html", css:"css/music.css"},
 }
 
 const render = async (path) => {
     const app = document.getElementById("app");
-    const file = routes[path] || "pages/404.html";
+    const file = routes[path] || {html: "pages/404.html", css: ""};
 
     try {
-        const res = await fetch(file);
+        // load html
+        const res = await fetch(file.html);
         if (!res.ok) throw new Error("Page not found");
         const html = await res.text();
         app.innerHTML = html;
+
+        // load css
+        const styleId = "page-style";
+        const oldStyle = document.getElementById(styleId);
+        if (oldStyle) {
+            oldStyle.remove();
+        }
+
+        if (!file.css) return;
+        const link = document.createElement("link");
+        link.href = file.css;
+        link.rel = "stylesheet";
+        link.id = styleId;
+        document.head.appendChild(link);
+    
     } catch (err) {
         app.innerHTML = "<h1>404 - Page not found</h1>";
     }

@@ -1,0 +1,43 @@
+# Normalize all text files to LF line endings
+* text=auto eol=lf
+
+# Ensure consistent diff behavior for common text-based files
+*.html     text diff=html
+*.css      text diff=css
+*.scss     text diff=css
+*.js       text diff=javascript
+*.ts       text diff=javascript
+*.json     text
+*.md       text
+*.xml      text
+
+# Treat images and binaries as binary to avoid corruption
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.webp     binary
+*.svg      text  # SVG is XML, so treat as text
+*.ico      binary
+
+# Fonts and other binary assets
+*.woff     binary
+*.woff2    binary
+*.ttf      binary
+*.otf      binary
+
+# Archives and compiled assets
+*.zip      binary
+*.gz       binary
+*.mp4      binary
+*.webm     binary
+
+# Lock files (avoid merge conflicts)
+package-lock.json merge=union
+yarn.lock         merge=union
+
+# Optional: Handle shell scripts correctly
+*.sh        text eol=lf
+
+# Optional: Force UTF-8 encoding
+* text working-tree-encoding=UTF-8

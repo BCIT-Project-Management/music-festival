@@ -1,0 +1,56 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment variables
+.env
+.env.local
+
+# Node.js (if using npm for build tools)
+node_modules/
+dist/
+build/
+.cache/
+tmp/
+temp/
+
+# Optional: Dependency managers
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Coverage reports
+coverage/
+
+# Compiled assets (if applicable)
+*.min.js
+*.min.css
+*.map
+
+# Static site generators or bundlers (optional)
+*.tsbuildinfo
+.next/
+out/
+.svelte-kit/
+public/build/
+
+# Misc
+*.bak
+*.swp
+*.tmp
+
+# If you're uploading to GitHub Pages from a `docs` folder, keep it
+# Otherwise ignore if it's a build output
+# docs/

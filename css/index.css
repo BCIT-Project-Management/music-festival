@@ -26,5 +26,6 @@ footer {
 }
 
 #social-links {
-    width: 30%;;
+    width: 30%;
+    list-style: none;
 }

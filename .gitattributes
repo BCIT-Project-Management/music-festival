@@ -17,7 +17,7 @@
 *.jpeg     binary
 *.gif      binary
 *.webp     binary
-*.svg      text  # SVG is XML, so treat as text
+*.svg      text
 *.ico      binary
 
 # Fonts and other binary assets

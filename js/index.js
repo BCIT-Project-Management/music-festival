@@ -61,6 +61,12 @@ const navigate = (e) => {
     render(path);
 }
 
+const setDate = () => {
+    const date = new Date();
+    document.querySelector("#date").innerHTML = date.toString().slice(0, 10);
+    console.log(date);
+}
+
 window.addEventListener("DOMContentLoaded", () => {
     const redirectUrl = sessionStorage.redirect;
 
@@ -74,6 +80,8 @@ window.addEventListener("DOMContentLoaded", () => {
         render(window.location.pathname);
     }
     document.body.addEventListener("click", navigate);
+
+    setDate();
 });
 
 window.addEventListener("popstate", () => {

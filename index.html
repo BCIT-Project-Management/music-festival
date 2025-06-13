@@ -22,7 +22,14 @@
         <ul id="nav-links" class="flex flex--hr text--uppercase flex--justify-between flex--g-20px">
             <li><a href="/Music" data-link>Music</a></li>
             <li><a href="/Tickets" data-link>Tickets</a></li>
-            <li><a href="/Experience" data-link>Experience</a></li>
+            <li><div class="drop-group">
+                <a id="experience" href="/Experience" drop-menu>Experience</a>
+                <ul id="experience-drop" class="drop-down">
+                    <li><a href="/Activities" data-link>Activities</a></li>
+                    <li><a href="/Food" data-link>Food</a></li>
+                    <li><a href="/Community" data-link>Community</a></li>
+                </ul>
+            </div></li>
             <li><a href="/Plan" data-link>Plan</a></li>
         </ul>
         <a href="/" data-link=""><img src="" alt="search"></a>

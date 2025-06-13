@@ -2,18 +2,6 @@
     padding: 50px 20%;
 }
 
-.home-cta-title {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 400;
-    font-size: 128px;
-}
-
-.home-cta-blurb {
-    text-align: center;
-    width: 800px;
-}
-
 .home-cta-button {
     align-self: center;
 }
@@ -28,8 +16,8 @@
 }
 
 .home-activity-img {
-    width: 300px;
-    aspect-ratio: 1/1;
+    height: 300px;
+    aspect-ratio: 4/3;
     background-color: lightgrey;
 }
 

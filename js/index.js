@@ -53,18 +53,35 @@ const render = async (path) => {
 }
 
 const navigate = (e) => {
-    if (!e.target.matches("[data-link]")) return;
-
-    e.preventDefault();
-    const path = e.target.getAttribute("href");
-    window.history.pushState({}, "", path);
-    render(path);
+    if (e.target.matches("[data-link]")) {
+        e.preventDefault();
+        const path = e.target.getAttribute("href");
+        window.history.pushState({}, "", path);
+        render(path);
+    }
+    if (e.target.matches("[drop-menu]")) {
+        e.preventDefault();
+        const dropDownId = e.target.id + "-drop";
+        const dropDown = document.querySelector(`#${dropDownId}`);
+        dropDown.style.opacity = "100%";
+        dropDown.style.display = "";
+    } else {
+        hideDropDown();
+    }
 }
 
 const setDate = () => {
     const date = new Date();
     document.querySelector("#date").innerHTML = date.toString().slice(0, 10);
     console.log(date);
+}
+
+const hideDropDown = () => {
+    const dropMenus = document.querySelectorAll(".drop-down");
+    for (const dropDown of dropMenus) {
+            dropDown.style.opacity = "0%";
+            dropDown.style.display = "none";
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -82,6 +99,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", navigate);
 
     setDate();
+    hideDropDown();
 });
 
 window.addEventListener("popstate", () => {

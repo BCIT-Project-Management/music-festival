@@ -1,0 +1,27 @@
+.page-title {
+    font-size: 96px;
+    text-align: left;
+}
+
+.blurb {
+    text-align: left;
+}
+
+.community-activity {
+    width: 100%;
+}
+
+.community-activity>div:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.community-activity-img {
+    height: 300px;
+    aspect-ratio: 4/3;
+    background-color: lightgrey;
+}
+
+.community-activity-info {
+    max-width: 1000px;
+}

@@ -1,0 +1,21 @@
+.page-title {
+    font-size: 96px;
+    text-align: left;
+}
+
+.blurb {
+    text-align: left;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
+.activities-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: lightgrey;
+}

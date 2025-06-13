@@ -1,3 +1,7 @@
+:root {
+    --content-padding: 15%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +22,7 @@ body {
 }
 
 .blurb {
-    max-width: 500px;
+    max-width: 700px;
     text-align: center;
 }
 

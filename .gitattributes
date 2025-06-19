@@ -23,7 +23,7 @@
 # Fonts and other binary assets
 *.woff     binary
 *.woff2    binary
-# *.ttf      binary
+*.ttf      binary
 *.otf      binary
 
 # Archives and compiled assets

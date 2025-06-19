@@ -104,7 +104,7 @@ body {
 
 @font-face {
     font-family: playtimes;
-    src: url("../fonts/Playtimes.ttf");
+    src: url("../fonts/Playtimes.ttf"), format("truetype");
 }
 
 h1, h2 {

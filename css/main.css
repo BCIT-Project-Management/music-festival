@@ -102,6 +102,11 @@ body {
     height: 100%;
 }
 
+@font-face {
+    font-family: playtimes;
+    src: url("../fonts/Playtimes.ttf");
+}
+
 h1, h2 {
     font-family: playtimes;
     font-size: 96px;

@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Playtimes';
+    src: url('../fonts/Playtimes.eot');
+    src: url('../fonts/Playtimes.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Playtimes.woff2') format('woff2'),
+         url('../fonts/Playtimes.woff') format('woff'),
+         url('../fonts/Playtimes.ttf') format('truetype'),
+         url('../fonts/Playtimes.svg#Playtimes') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
     --content-padding: 5%;
 }
@@ -100,11 +114,6 @@ body {
 .divider--vertical {
     width: 1px;
     height: 100%;
-}
-
-@font-face {
-    font-family: playtimes;
-    src: url("../fonts/Playtimes.ttf") format("truetype");
 }
 
 h1, h2 {

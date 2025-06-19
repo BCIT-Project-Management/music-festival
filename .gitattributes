@@ -21,10 +21,10 @@
 *.ico      binary
 
 # Fonts and other binary assets
-*.woff     binary
-*.woff2    binary
-*.ttf      binary
-*.otf      binary
+# *.woff     binary
+# *.woff2    binary
+# *.ttf      binary
+# *.otf      binary  
 
 # Archives and compiled assets
 *.zip      binary

@@ -1,5 +1,5 @@
 :root {
-    --content-padding: 15%;
+    --content-padding: 5%;
 }
 
 * {
@@ -8,7 +8,8 @@
 }
 
 body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+    font-size: 28px;
     height: 100vh;
     width: 100vw;
 }
@@ -18,7 +19,7 @@ body {
     text-align: center;
     align-content: center;
     font-weight: 400;
-    font-size: 128px;
+    font-size: 96px;
 }
 
 .blurb {
@@ -101,6 +102,28 @@ body {
     height: 100%;
 }
 
+@font-face {
+    font-family: playtimes;
+    src: url("../fonts/Playtimes.ttf");
+}
+
+h1, h2 {
+    font-family: playtimes;
+    font-size: 96px;
+    color: black;
+    -webkit-text-stroke: 5px;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 45px;
+    -webkit-text-stroke: 3px;
+}
+
+img {
+    border-radius: 30px;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -108,12 +131,21 @@ a {
 
 button {
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 20px 80px;
     background-color: lightgray;
+    border-top: 7px solid;
+    border-right: 20px solid;
+    border-bottom: 20px solid;
+    border-left: 7px solid;
     font-size: 2rem;
 }
 
 ul {
     list-style: none;
+}
+
+em {
+    font-weight: 600;
+    font-style: normal;
 }

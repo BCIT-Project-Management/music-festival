@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
 nav {
     border-bottom: 1px solid black;
 }
@@ -7,22 +9,28 @@ nav {
     list-style: none;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+    padding-right: 40px;
 }
 
 #date {
-    font-size: 0.8em;
+    font-weight: 700;
     align-content: center;
 }
 
 #app {
     padding: 40px var(--content-padding);
-    height: 100%;
+}
+
+#content {
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
 footer {
     padding: 20px var(--content-padding);
+    border-top: 1px solid black;
 }
 
 #social-links {
@@ -45,4 +53,44 @@ footer {
     gap: 10px;
     justify-content: space-evenly;
     padding: 10px;
+}
+
+.newsletter-form {
+    height: 50px;
+}
+
+.newsletter-form>* {
+    padding: 1em;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.newsletter-form input {
+    width: 384px;
+    border: 1px solid #e7e7e7;
+    border-bottom: 1px solid black;
+}
+
+.newsletter-form button {
+    border-radius: 0;
+    border: 1px solid #e7e7e7;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+.newsletter-form+p {
+    font-size: 10px;
+    color: #b4b4b4b4;
+}
+
+.newsletter-form+p>a{
+    font-style: normal;
+    text-decoration: underline;
+    color: inherit;
+}
+
+.social-follows {
+    text-align: right;
+    font-size: 18px;
 }

@@ -70,12 +70,6 @@ const navigate = (e) => {
     }
 }
 
-const setDate = () => {
-    const date = new Date();
-    document.querySelector("#date").innerHTML = date.toString().slice(0, 10);
-    console.log(date);
-}
-
 const hideDropDown = () => {
     const dropMenus = document.querySelectorAll(".drop-down");
     for (const dropDown of dropMenus) {
@@ -97,8 +91,6 @@ window.addEventListener("DOMContentLoaded", () => {
         render(window.location.pathname);
     }
     document.body.addEventListener("click", navigate);
-
-    setDate();
     hideDropDown();
 });
 

@@ -8,19 +8,50 @@
 
 .home-activity {
     width: 100%;
+    text-align: right;
 }
 
 .home-activity>div:nth-child(even) {
     flex-direction: row-reverse;
-    text-align: right;
+    text-align: left;
 }
 
 .home-activity-img {
-    height: 300px;
+    width: 50%;
     aspect-ratio: 4/3;
     background-color: lightgrey;
 }
 
 .home-activity-info {
-    max-width: 1000px;
+    max-width: 50%;
+}
+
+.home-activity>div:nth-child(odd) .home-activity-info {
+    align-items: flex-end;
+}
+
+.home-lineup-button {
+    max-width: 80%;
+}
+
+/* Color Scheme */
+nav {
+    background-color: #e8f7ff;
+}
+
+footer {
+    background-color: #e8f7ff;
+}
+
+button {
+    border-color: #465c94;
+    background-color: white;
+}
+
+h1, h2 {
+    color: #465c94;
+}
+
+body {
+    background-color: #f6fbfe;
 }

@@ -4,27 +4,95 @@
 }
 
 .tickets-poster {
-    width: 300px;
+    grid-area: poster;
+    width: 400px;
     height: 400px;
     background-color: lightgrey;
+    border-radius: 15px;
 }
 
 .tickets-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "poster grid1 grid2" "none grid3 grid4";
     grid-auto-flow: row;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 80px;
+    width: 100%;
 }
 
 .tickets-card {
-    background-color: grey;
-    max-width: 200px;
+    background-color: #8e6180;
+    box-sizing: border-box;
+    width: 400px;
     height: 400px;
-    text-align: center;
     color: white;
-    padding: 20px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20%;
+    gap: 40px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.tickets-card h3 {
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.tickets-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tickets-card p {
+    font-weight: 700;
+}
+
+.tickets-card-weekend-pass {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.tickets-card-starting-at {
+    font-size: 12px;
+}
+
+.tickets-card-price {
+    font-size: 24px;
+}
+
+.tickets-card p:last-child {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: "Hanken Grotesk";
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-text-stroke: initial;
+    -webkit-text-fill-color: initial;
+}
+
+/* Color Scheme */
+nav {
+    background-color: #f8e5f0;
+}
+
+footer {
+    background-color: #f8e5f0;
+}
+
+button {
+    border-color: #8e6180;
+    background-color: white;
+}
+
+h1, h2 {
+    color: #8e6180;
+}
+
+body {
+    background-color: #fffbfe;
 }

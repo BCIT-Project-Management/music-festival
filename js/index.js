@@ -29,6 +29,9 @@ const render = async (path) => {
         const html = await res.text();
         app.innerHTML = html;
 
+        // run script
+        runScripts(app);
+
         // load css
         const styleId = "page-style";
         const oldStyle = document.getElementById(styleId);
@@ -76,6 +79,23 @@ const hideDropDown = () => {
             dropDown.style.opacity = "0%";
             dropDown.style.display = "none";
     }
+}
+
+const runScripts = (container) => {
+    const scripts = container.querySelectorAll("script");
+
+    scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+            newScript.async = true;
+        } else {
+            newScript.textContent = oldScript.textContent;
+        }
+
+        document.body.appendChild(newScript);
+        oldScript.remove();
+    });
 }
 
 window.addEventListener("DOMContentLoaded", () => {

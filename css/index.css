@@ -2,6 +2,12 @@
 
 nav {
     border-bottom: 1px solid black;
+    align-items: center;
+}
+
+nav>img {
+    width: 105.22px;
+    height: 136px;
 }
 
 #nav-links {
@@ -31,6 +37,7 @@ nav {
 footer {
     padding: 20px var(--content-padding);
     border-top: 1px solid black;
+    overflow-y: hidden;
 }
 
 #social-links {
@@ -93,4 +100,14 @@ footer {
 .social-follows {
     text-align: right;
     font-size: 18px;
+    width: 100%;
+    height: 300px;
+    position: relative;
 }
+
+.social-follows img {
+    position: absolute;
+    top: -200px;
+    left: -150px;
+}
+

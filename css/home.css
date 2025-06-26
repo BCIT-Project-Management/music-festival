@@ -1,5 +1,32 @@
 .home-cta {
     padding: 50px 20%;
+    position: relative;
+}
+
+.home-hero-image {
+    content: "";
+    background-image: url("../assets/home/hero_flower.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303.32px;
+    height: 324.62px;
+    position: absolute;
+    left: 0;
+    top: 150px;
+}
+
+.home-hero-image:hover {
+    animation: rotate linear infinite 5s forwards;
+}
+/* animations */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .home-cta-button {
@@ -32,6 +59,24 @@
 
 .home-lineup-button {
     max-width: 80%;
+}
+
+.page-title {
+    position: relative;
+}
+.page-title::before {
+    content: "";
+    background-image: url("../assets/home/title_flower.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 252px;
+    height: 272.55px;
+    position: absolute;
+    z-index: -10;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-20%);
 }
 
 /* Color Scheme */

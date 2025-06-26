@@ -91,6 +91,10 @@ body {
     justify-content: space-between;
 }
 
+.flex--align-end {
+    align-items: flex-end;
+}
+
 .pad--10px {
     padding: 10px;
 }
@@ -108,12 +112,13 @@ body {
 }
 
 .divider {
-    background-color: gray;
+    background-color: black;
 }
 
 .divider--vertical {
-    width: 1px;
-    height: 100%;
+    width: 2px;
+    height: 50px;
+    align-self: center;
 }
 
 h1, h2 {
@@ -121,7 +126,7 @@ h1, h2 {
     font-size: 96px;
     color: black;
     -webkit-text-stroke: 5px;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
 }
 
 h2 {
@@ -158,3 +163,4 @@ em {
     font-weight: 600;
     font-style: normal;
 }
+

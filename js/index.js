@@ -71,6 +71,12 @@ const navigate = (e) => {
     } else {
         hideDropDown();
     }
+    if (e.target.matches(".cta-button")) {
+        e.preventDefault();
+        const path = "/tickets";
+        window.history.pushState({}, path);
+        render(path);
+    }
 }
 
 const hideDropDown = () => {

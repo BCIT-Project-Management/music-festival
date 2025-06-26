@@ -1,5 +1,60 @@
 .music-poster {
-    width: 800px;
-    aspect-ratio: 9/16;
-    background-color: lightgrey;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.music-poster img {
+    width: 1120px;
+}
+
+.page-title, .music-poster {
+    position: relative;
+}
+
+.page-title::before, .music-poster::before {
+    content: "";
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.page-title::before {
+    background-image: url("../assets/music/flower_1.png");
+    width: 306px;
+    height: 342px;
+    left: -200px;
+    top: 0;
+    z-index: -10;
+}
+
+.music-poster::before {
+    background-image: url("../assets/music/flower_2.png");
+    width: 338px;
+    height: 377.78px;
+    z-index: 100;
+    bottom: -100px;
+    right: 0;
+}
+
+/* Color Scheme */
+nav {
+    background-color: #e8f8e5;
+}
+
+footer {
+    background-color: #e8f8e5;
+}
+
+button {
+    border-color: #688e61;
+    background-color: white;
+}
+
+h1, h2 {
+    color: #688e61;
+}
+
+body {
+    background-color: #f8fdf7;
 }

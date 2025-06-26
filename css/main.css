@@ -153,6 +153,7 @@ button {
     border-bottom: 20px solid;
     border-left: 7px solid;
     font-size: 2rem;
+    cursor: pointer;
 }
 
 ul {
@@ -162,6 +163,11 @@ ul {
 em {
     font-weight: 600;
     font-style: normal;
+}
+
+/* transitions */
+nav, body, footer {
+    transition: background-color 0.5s ease-in-out
 }
 
 /* animations */

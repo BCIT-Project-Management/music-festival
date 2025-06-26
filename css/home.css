@@ -19,15 +19,7 @@
 .home-hero-image:hover {
     animation: rotate linear infinite 5s forwards;
 }
-/* animations */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 .home-cta-button {
     align-self: center;

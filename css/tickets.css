@@ -1,6 +1,57 @@
 .page-title {
     font-size: 96px;
     text-align: left;
+    position: relative;
+    margin: 40px 0;
+}
+
+.page-title::before {
+    content: "";
+    background-image: url("../assets/passes/flower_1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: -30px;
+    top: 30px;
+    width: 67.1px;
+    height: 72.91px;
+}
+
+.tickets-decoration-top {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -20px;
+    top: -20px;
+}
+
+.tickets-decoration-top::before, .tickets-decoration-top::after, .tickets-decoration-passes {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.tickets-decoration-top:hover::before,
+.tickets-decoration-top:hover::after,
+.tickets-decoration-passes:hover {
+    animation: rotate linear 5s infinite forwards;
+}
+
+.tickets-decoration-top::before {
+    background-image: url("../assets/passes/flower_3.png");
+    width: 159px;
+    height: 187.93px;
+}
+
+.tickets-decoration-top::after {
+    background-image: url("../assets/passes/flower_4.png");
+    width: 262px;
+    height: 309.66px;
+    right: -20px;
+    bottom: -50px;
 }
 
 .tickets-poster {
@@ -18,6 +69,15 @@
     justify-content: space-between;
     gap: 80px;
     width: 100%;
+    position: relative;
+}
+
+.tickets-decoration-passes {
+    background-image: url("../assets/passes/flower_2.png");
+    width: 178px;
+    height: 210.38px;
+    top: 500px;
+    left: 350px;
 }
 
 .tickets-card {

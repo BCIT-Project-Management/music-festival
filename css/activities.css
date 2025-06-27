@@ -7,15 +7,96 @@
     text-align: left;
 }
 
-.activities-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-flow: row;
-    gap: 10px;
+.activities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
-.activities-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background-color: lightgrey;
+.activities-card {
+    border-radius: 30px;
+    display: flex;
+    height: 420px;
+    background-color: #dca201;
+}
+
+.activities-list .activities-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.activities-card img {
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+}
+
+.activities-card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.activities-card-info div {
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+}
+
+.activities-list .activities-card:nth-child(even) .activities-card-info div {
+    flex-direction: row-reverse;
+}
+
+.activities-card-info div h3 {
+    font-family: "Hanken Grotesk";
+    font-size: 33px;
+    font-weight: 600;
+    color: white;
+    width: 40%;
+}
+
+.activities-list .activities-card:nth-child(even) h3 {
+    text-align: right;
+}
+
+.activities-card-info p {
+    width: 60%;
+}
+
+.activities-expand-button {
+    border: none;
+    border-radius: 30px;
+    font-family: "Hanken Grotesk";
+    font-size: 22px;
+    font-weight: 400;
+    width: 250px;
+    align-self: flex-start;
+    padding: 30px;
+}
+
+.activities-list .activities-card:nth-child(even) .activities-expand-button {
+    align-self: flex-end;
+}
+
+/* Color Scheme */
+nav {
+    background-color: #fff7df;
+}
+
+footer {
+    background-color: #fff7df;
+}
+
+button {
+    border-color: #dca201;
+    background-color: white;
+}
+
+h1 {
+    color: #ffc010;
+}
+
+body {
+    background-color: #fffaf3;
 }

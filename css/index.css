@@ -28,6 +28,7 @@ nav>img {
 #app {
     padding: 40px var(--content-padding);
     max-width: 1920px;
+    min-width: 1200px;
 }
 
 #content {

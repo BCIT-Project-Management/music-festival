@@ -5,17 +5,87 @@
 
 .blurb {
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+}
+
+.food-display {
+    padding: 120px 0;
+}
+
+.food-display h2 {
+    font-family: "Hanken Grotesk";
+    font-size: 36px;
+    font-weight: 400;
+    -webkit-text-stroke: initial;
+    -webkit-text-fill-color: initial;
+    margin-top: 120px;
+}
+
+.food-display h2:first-child {
+    margin: 0;
 }
 
 .food-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-flow: row;
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.food-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background-color: lightgrey;
+.food-grid-card {
+    width: 400px;
+    height: 500px;
+    background-color: #dca201;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    color: white;
+}
+
+.food-grid-card div {
+    padding: 10px 20px 40px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.food-grid-card img {
+    border-radius: 15px;
+}
+
+.food-grid-card h3 {
+    font-family: "Hanken Grotesk";
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.food-grid-card p {
+    font-family: "Hanken Grotesk";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Color Scheme */
+nav {
+    background-color: #fff7df;
+}
+
+footer {
+    background-color: #fff7df;
+}
+
+button {
+    border-color: #dca201;
+    background-color: white;
+}
+
+h1 {
+    color: #ffc010;
+}
+
+body {
+    background-color: #fffaf3;
 }

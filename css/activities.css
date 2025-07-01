@@ -38,25 +38,28 @@
     justify-content: space-between;
 }
 
-.activities-card-info div {
+.activities-card-info>div {
     display: flex;
     height: 60%;
     justify-content: space-between;
 }
 
-.activities-list .activities-card:nth-child(even) .activities-card-info div {
+.activities-list .activities-card:nth-child(even) .activities-card-info>div {
     flex-direction: row-reverse;
 }
 
-.activities-card-info div h3 {
+.activities-card-info h3, .activities-card-info h4 {
     font-family: "Hanken Grotesk";
     font-size: 33px;
     font-weight: 600;
     color: white;
-    width: 40%;
 }
 
-.activities-list .activities-card:nth-child(even) h3 {
+.activities-card-info h4{
+    font-size: 24px;
+}
+
+.activities-list .activities-card:nth-child(even) h3, .activities-list .activities-card:nth-child(even) h4 {
     text-align: right;
 }
 

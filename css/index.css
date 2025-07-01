@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
 
+
 nav {
     border-bottom: 1px solid black;
     align-items: center;
@@ -29,6 +30,9 @@ nav>img {
     padding: 40px var(--content-padding);
     max-width: 1920px;
     min-width: 1200px;
+    background-image: url("../assets/bg.png");
+    position: relative;
+    z-index: -100;
 }
 
 #content {

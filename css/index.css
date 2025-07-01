@@ -44,6 +44,20 @@ footer {
     padding: 20px var(--content-padding);
     border-top: 1px solid black;
     overflow-y: hidden;
+    font-size: 16px;
+}
+
+.footer-left {
+    width: 50%;
+}
+
+.footer-crumbs {
+    font-size: 14px;
+}
+
+.footer-crumbs-header {
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 #social-links {
